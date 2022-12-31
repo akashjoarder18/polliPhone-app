@@ -132,5 +132,11 @@
 <script src="{{asset('admin-assets/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('admin-assets/dist/js/pages/dashboard.js')}}"></script>
+<script>
+  //Date picker
+  $('#reservationdate').datetimepicker({
+        format: 'Y-MM-DD'
+    });
+</script>
 </body>
 </html>

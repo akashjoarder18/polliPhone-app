@@ -65,6 +65,30 @@
 
             </ul>
           </li>
+          <li class="nav-item {{$current_route=='outlets.index'?'menu-open':''}}">
+            <a href="#" class="nav-link {{$current_route=='outlets.index'?'active':''}}">
+              <i class="nav-icon fa-solid fa-shop"></i>
+              <p>
+                Outlet Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('outlets.index')}}" class="nav-link {{$current_route=='outlets.index'?'active':''}}">
+                  <i class="far fas fa-shop"></i>
+                  <p>Outlets</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('outlets.banners.index')}}" class="nav-link {{$current_route=='outlets.banners.index'?'active':''}}">
+                  <i class="far fas fa-shop"></i>
+                  <p>Banners</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
 
         </ul>
       </nav>

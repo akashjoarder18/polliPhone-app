@@ -20,7 +20,7 @@ class UserController extends Controller
 
     // User register
     public function register(){        
-        $url = '/admin/users';
+        $url = '/admin/users/store';
         $title = 'Users Register';
         $data= compact('url','title');
         return view('admin.users.register')->with($data);
