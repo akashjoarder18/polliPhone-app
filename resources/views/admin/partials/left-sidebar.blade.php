@@ -65,9 +65,33 @@
 
             </ul>
           </li>
+          <li class="nav-item {{$current_route=='visits.index'?'menu-open':''}}">
+            <a href="#" class="nav-link {{$current_route=='visits.index'?'active':''}}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Executive History
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('visits.index')}}" class="nav-link {{$current_route=='visits.index'?'active':''}}">
+                  <i class="far fas fa-user"></i>
+                  <p>Marketing Executive Visits</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('psales.index')}}" class="nav-link {{$current_route=='psales.index'?'active':''}}">
+                  <i class="far fas fa-user"></i>
+                  <p>Marketing Executive Sales</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
           <li class="nav-item {{$current_route=='outlets.index'?'menu-open':''}}">
             <a href="#" class="nav-link {{$current_route=='outlets.index'?'active':''}}">
-              <i class="nav-icon fa-solid fa-shop"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Outlet Management
                 <i class="right fas fa-angle-left"></i>
@@ -76,14 +100,50 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('outlets.index')}}" class="nav-link {{$current_route=='outlets.index'?'active':''}}">
-                  <i class="far fas fa-shop"></i>
+                  <i class="far fas fa-user"></i>
                   <p>Outlets</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('outlets.banners.index')}}" class="nav-link {{$current_route=='outlets.banners.index'?'active':''}}">
-                  <i class="far fas fa-shop"></i>
+                  <i class="far fas fa-user"></i>
                   <p>Banners</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item {{$current_route=='campaigns.index'?'menu-open':''}}">
+            <a href="#" class="nav-link {{$current_route=='campaigns.index'?'active':''}}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Campaign Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('campaigns.index')}}" class="nav-link {{$current_route=='campaigns.index'?'active':''}}">
+                  <i class="far fas fa-user"></i>
+                  <p>Campaigns</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item {{$current_route=='products.index'?'menu-open':''}}">
+            <a href="#" class="nav-link {{$current_route=='products.index'?'active':''}}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Product Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('products.index')}}" class="nav-link {{$current_route=='products.index'?'active':''}}">
+                  <i class="far fas fa-user"></i>
+                  <p>Products</p>
                 </a>
               </li>
 

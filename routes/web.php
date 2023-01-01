@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\Admin\{AuthController,ProfileController,UserController,OutletController,BannerController};
+use App\Http\Controllers\Admin\{AuthController,ProfileController,UserController,OutletController,BannerController,VisitController,ProductController,CampaignController};
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,6 +53,32 @@ Route::group(['middleware'=>['admin_auth']],function(){
     Route::get('/admin/outlets/festons/edit/{id}',[OutletController::class,'edit'])->name('outlets.festons.edit');
     Route::get('/admin/outlets/festons/delete/{id}',[OutletController::class,'delete'])->name('outlets.festons.delete');
     Route::post('/admin/outlets/festons/update/{id}',[OutletController::class,'update'])->name('outlets.festons.update');
+
+    // products
+    Route::get('/admin/products',[ProductController::class,'index'])->name('products.index');
+    Route::get('/admin/products/register',[ProductController::class,'register'])->name('products.register');
+    Route::post('/admin/products/store',[ProductController::class,'store'])->name('products.store');
+    Route::get('/admin/products/edit/{id}',[ProductController::class,'edit'])->name('products.edit');
+    Route::get('/admin/products/delete/{id}',[ProductController::class,'delete'])->name('products.delete');
+    Route::post('/admin/products/update/{id}',[ProductController::class,'update'])->name('products.update');
+
+    // campaigns
+    Route::get('/admin/campaigns',[CampaignController::class,'index'])->name('campaigns.index');
+    Route::get('/admin/campaigns/register',[CampaignController::class,'register'])->name('campaigns.register');
+    Route::post('/admin/campaigns/store',[CampaignController::class,'store'])->name('campaigns.store');
+    Route::get('/admin/campaigns/edit/{id}',[CampaignController::class,'edit'])->name('campaigns.edit');
+    Route::get('/admin/campaigns/delete/{id}',[CampaignController::class,'delete'])->name('campaigns.delete');
+    Route::post('/admin/campaigns/update/{id}',[CampaignController::class,'update'])->name('campaigns.update');
+
+    Route::get('/admin/executive/{id}',[CampaignController::class,'executives'])->name('campaigns.executives');
+
+    
+
+    // executive visit
+    Route::get('/admin/visits',[VisitController::class,'index'])->name('visits.index');
+
+    // executive product sales on occasion
+    Route::get('/admin/psales',[VisitController::class,'productSale'])->name('psales.index');
 
     // logout
     Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');
